@@ -4,22 +4,22 @@ import org.junit.Test;
 
 import com.brunocobalchini.logica.LogicaCalculadora;
 
-public class CalculadoraTeste { // FALTA FAZER EXCEPTION PARA EVITAR O USO NÚMEROS ACIMA DA CAPACIDADE DO DOUBLE E DE LETRAS
+public class CalculadoraTeste { // FALTA FAZER EXCEPTION PARA EVITAR O USO NÚMEROS ACIMA DA CAPACIDADE DO DOUBLE
+								// E DE LETRAS
 	double segundoOperando = 0; // Informa o primeiro número para a cálculadora
 	double primeiroOperando = 0; // Informa o segundo número para a cálculadora
-	double operacao = 1; // INFORMAR NO logicaCalc: 1 = ADICAO, 2 = SUBTRACAO, 3 = MULTIPLICACAO, 4 = DIVISAO
-
+	double operacao = 1; // INFORMAR NO logicaCalc: 1 = ADICAO, 2 = SUBTRACAO, 3 = MULTIPLICACAO, 4 =
+							// DIVISAO
 
 	@Test
 	public void verificaCalculadoraAdicao() {
 		LogicaCalculadora logicaCalc = new LogicaCalculadora();
 		segundoOperando = -1;
 		primeiroOperando = -1;
-		operacao = 1; 
+		operacao = 1;
 		logicaCalc.calcular(operacao, primeiroOperando, segundoOperando);
 		System.out.println("ADICAO: " + logicaCalc.calcular(operacao, primeiroOperando, segundoOperando));
 	}
-
 
 	@Test
 	public void verificaCalculadoraSubtracao() { // Está dando -1, ERRADO para nós, certo para o Java
@@ -38,7 +38,7 @@ public class CalculadoraTeste { // FALTA FAZER EXCEPTION PARA EVITAR O USO NÚMER
 		primeiroOperando = -1;
 		operacao = 3;
 		logicaCalc.calcular(operacao, primeiroOperando, segundoOperando);
-		System.out.println("MULTIPLICACAO: " +logicaCalc.calcular(operacao, primeiroOperando, segundoOperando));
+		System.out.println("MULTIPLICACAO: " + logicaCalc.calcular(operacao, primeiroOperando, segundoOperando));
 	}
 
 	@Test
@@ -52,7 +52,8 @@ public class CalculadoraTeste { // FALTA FAZER EXCEPTION PARA EVITAR O USO NÚMER
 	}
 
 	@Test
-	public void verificaOperacao() { // Se der = 0, é que está certo. Na classe LogicaCalculadora tem um else if para este caso!! 
+	public void verificaOperacao() { // Se der = 0, é que está certo. Na classe LogicaCalculadora tem um else if para
+										// este caso!!
 		LogicaCalculadora logicaCalc = new LogicaCalculadora();
 		operacao = 3434;
 		segundoOperando = 1;
@@ -60,6 +61,5 @@ public class CalculadoraTeste { // FALTA FAZER EXCEPTION PARA EVITAR O USO NÚMER
 		logicaCalc.calcular(operacao, primeiroOperando, segundoOperando);
 		System.out.println("OPERACAO: " + logicaCalc.calcular(operacao, primeiroOperando, segundoOperando));
 	}
-
 
 }

@@ -11,11 +11,12 @@ public class PrintsCalculadora {
 	}
 
 	public void operacaoPrint() {
-		System.out.println("Escolha a operação!\n 1 para SOMAR \n 2 para SUBTRAIR \n 3 para MULTIPLICAR \n 4 para DIVIDIR ");
+		System.out.println(
+				"Escolha a operação!\n 1 para SOMAR \n 2 para SUBTRAIR \n 3 para MULTIPLICAR \n 4 para DIVIDIR ");
 
 	}
 
 	public void resultadoPrint(double resultadoFinal) {
 		System.out.println("O resultado é: " + resultadoFinal);
-	}	
+	}
 }
